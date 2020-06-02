@@ -7,7 +7,7 @@ router.get('/', async (req: Request, res: Response) => {
     let list: Array<String> = [];
     let local_path = await filterImageFromURL(image_url);
     list.push(local_path);
-    res.status(200).send(`Filtered image local path is ${local_path}`);
+    res.status(200).sendfile(local_path);
 });
 
 export const imageFilterRouter: Router = router;
