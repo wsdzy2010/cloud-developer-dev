@@ -11,7 +11,7 @@ router.get('/', async (req: Request, res: Response) => {
         res.status(200).sendfile(local_path);
     }
     catch (e) {
-        res.status(500).send(`Error: ${e.message}`);
+        res.status(402).send(`Error: ${e.message}`);
     }
 });
 
